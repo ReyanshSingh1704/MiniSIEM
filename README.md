@@ -162,8 +162,8 @@ Each detected attack generates:
 
 ## 👨‍💻 Authors
 
-**Reyansh Singh**
-**Abhyuday Arya**
+**Reyansh Singh,**
+**Abhyuday Arya, and**
 **Atharv Jain**
 
 ---
