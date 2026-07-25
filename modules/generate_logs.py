@@ -2,9 +2,6 @@ import random
 from datetime import datetime
 from modules.database import insert_log
 import os
-
-os.makedirs("logs", exist_ok=True)
-
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 LOGS_DIR = os.path.join(BASE_DIR, "logs")
@@ -13,7 +10,8 @@ os.makedirs(LOGS_DIR, exist_ok=True)
 LOG_FILE = os.path.join(LOGS_DIR, "security.log")
 
 if not os.path.exists(LOG_FILE):
-    open(LOG_FILE, "w").close()
+    with open(LOG_FILE, "w", encoding="utf-8"):
+        pass
 
 # -----------------------------
 HOSTNAMES = [
