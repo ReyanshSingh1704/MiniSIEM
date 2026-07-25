@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+# Virtual Environment
+venv/
+# VS Code
+.vscode/
+# Database
+*.db
+database/*.db
+# Logs
+logs/security.log
+*.log
+# Python cache
+.pytest_cache/
+.mypy_cache/
+# OS files
+.DS_Store
+Thumbs.db
+# Environment variables
+.env
+# IDE
+.idea/
+# Temporary files
+*.tmp
+*.bak
+# Python
+__pycache__/
+*.pyc
+
+# Virtual Environment
+venv/
+
+# Database
+*.db
+database/*.db
+
+# Logs
+logs/security.log
+
+# VS Code
+.vscode/
+
+# OS Files
+.DS_Store
+Thumbs.db
