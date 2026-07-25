@@ -16,6 +16,10 @@ from modules.generate_logs import (
 )
 from modules.detector import run_detection
 from modules.alert_manager import save_all_alerts
+import os
+os.makedirs("logs", exist_ok=True)
+os.makedirs("database", exist_ok=True)
+
 app = Flask(__name__)
 # Initialize Database
 create_database()

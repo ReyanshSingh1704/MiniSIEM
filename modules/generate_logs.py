@@ -1,6 +1,14 @@
 import random
 from datetime import datetime
 from modules.database import insert_log
+import os
+
+os.makedirs("logs", exist_ok=True)
+
+LOG_FILE = "logs/security.log"
+
+if not os.path.exists(LOG_FILE):
+    open(LOG_FILE, "w").close()
 # Sample Data
 # -----------------------------
 HOSTNAMES = [
@@ -34,7 +42,7 @@ def write_log(timestamp, hostname, username, ip,
         f"{severity} | "
         f"{message}"
     )
-    with open("logs/security.log", "a") as file:
+    with open(LOG_FILE, "a") as file:
         file.write(line + "\n")
     insert_log(
         timestamp,
