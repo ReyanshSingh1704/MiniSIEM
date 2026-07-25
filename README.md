@@ -61,8 +61,7 @@ MiniSIEM/
 │
 └── templates/
     |── dashboard.html
-    |──logs.html
-    |──alerts.html
+    
 ```
 
 ---
