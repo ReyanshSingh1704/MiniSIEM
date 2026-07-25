@@ -1,5 +1,5 @@
 # 🛡 MiniSIEM
-
+🚀 **Live Demo:** https://minisiem.onrender.com
 A lightweight Security Information and Event Management (SIEM) system built with **Python, Flask, and SQLite**.  
 MiniSIEM simulates real-world SOC (Security Operations Center) operations by generating security logs, detecting suspicious activities, creating alerts, and providing a web dashboard for monitoring.
 
