@@ -5,11 +5,16 @@ import os
 
 os.makedirs("logs", exist_ok=True)
 
-LOG_FILE = "logs/security.log"
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+LOGS_DIR = os.path.join(BASE_DIR, "logs")
+os.makedirs(LOGS_DIR, exist_ok=True)
+
+LOG_FILE = os.path.join(LOGS_DIR, "security.log")
 
 if not os.path.exists(LOG_FILE):
     open(LOG_FILE, "w").close()
-# Sample Data
+
 # -----------------------------
 HOSTNAMES = [
     "WIN-01",
@@ -42,7 +47,7 @@ def write_log(timestamp, hostname, username, ip,
         f"{severity} | "
         f"{message}"
     )
-    with open(LOG_FILE, "a") as file:
+    with open(LOG_FILE, "a", encoding="utf-8") as file:
         file.write(line + "\n")
     insert_log(
         timestamp,
